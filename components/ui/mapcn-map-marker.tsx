@@ -30,6 +30,15 @@ export function Map({
         }}
         mapStyle={MAP_STYLE}
         style={{ width: "100%", height: "100%" }}
+        attributionControl={{ compact: true }}
+        onLoad={(e) => {
+          // start with the attribution collapsed to the (i) button
+          const attrib = e.target
+            .getContainer()
+            .querySelector(".maplibregl-ctrl-attrib");
+          attrib?.removeAttribute("open");
+          attrib?.classList.remove("maplibregl-compact-show");
+        }}
       >
         {children}
       </MapGL>
