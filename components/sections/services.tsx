@@ -13,6 +13,7 @@ import {
 import { services } from "@/lib/site";
 import { Reveal } from "@/components/motion";
 import { Card3D } from "@/components/ui/animated-3d-card";
+import ScrollFloat from "@/components/ui/scroll-float";
 
 const icons: Record<string, LucideIcon> = {
   factory: Factory,
@@ -33,7 +34,12 @@ export function Services() {
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange">
             What we make
           </p>
-          <h2 className="mt-3 text-3xl font-bold md:text-5xl">Services</h2>
+          <ScrollFloat
+            containerClassName="mt-3"
+            textClassName="text-3xl font-bold md:text-5xl"
+          >
+            Services
+          </ScrollFloat>
           <p className="mt-4 max-w-2xl text-muted">
             From a single custom component to large fabrication requirements —
             manufactured to exact specifications, project requirements and

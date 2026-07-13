@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import { Reveal } from "@/components/motion";
 import { Button } from "@/components/ui/neon-button";
 import { GlowCard } from "@/components/ui/spotlight-card";
+import ScrollFloat from "@/components/ui/scroll-float";
 
 export function AboutContact() {
   return (
@@ -13,9 +14,12 @@ export function AboutContact() {
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange">
             About us
           </p>
-          <h2 className="mt-3 text-3xl font-bold md:text-5xl">
+          <ScrollFloat
+            containerClassName="mt-3"
+            textClassName="text-3xl font-bold md:text-5xl"
+          >
             {site.name}
-          </h2>
+          </ScrollFloat>
           <div className="mt-6 space-y-4 leading-relaxed text-muted">
             <p>
               With 25+ years of fabrication experience, {site.name} has built a

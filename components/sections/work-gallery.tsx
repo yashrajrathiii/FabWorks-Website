@@ -1,6 +1,7 @@
 "use client";
 import { workItems } from "@/lib/site";
 import { Reveal } from "@/components/motion";
+import ScrollFloat from "@/components/ui/scroll-float";
 
 // First 6 work items shown as a gallery grid. Placeholder tiles —
 // replace /public/work/placeholder-N.svg with real photos (same names).
@@ -12,9 +13,12 @@ export function WorkGallery() {
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange">
             Our work
           </p>
-          <h2 className="mt-3 text-3xl font-bold md:text-5xl">
+          <ScrollFloat
+            containerClassName="mt-3"
+            textClassName="text-3xl font-bold md:text-5xl"
+          >
             Recent fabrication
-          </h2>
+          </ScrollFloat>
           <p className="mt-4 max-w-2xl text-muted">
             A selection of projects delivered across Chhattisgarh, Odisha,
             Maharashtra, Rajasthan and Madhya Pradesh.

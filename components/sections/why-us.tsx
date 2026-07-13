@@ -2,6 +2,7 @@
 import { BadgeCheck } from "lucide-react";
 import { stats, whyUs } from "@/lib/site";
 import { Counter, Reveal } from "@/components/motion";
+import ScrollFloat from "@/components/ui/scroll-float";
 
 export function WhyUs() {
   return (
@@ -11,9 +12,12 @@ export function WhyUs() {
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-orange">
             Why choose us
           </p>
-          <h2 className="mt-3 text-3xl font-bold md:text-5xl">
+          <ScrollFloat
+            containerClassName="mt-3"
+            textClassName="text-3xl font-bold md:text-5xl"
+          >
             Why Tarbha Industries
-          </h2>
+          </ScrollFloat>
         </Reveal>
 
         <div className="mt-12 grid gap-5 rounded-xl border border-line bg-surface p-8 sm:grid-cols-3">

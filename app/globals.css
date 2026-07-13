@@ -44,6 +44,19 @@ h4 {
   color: #fff;
 }
 
+/* ScrollFloat (React Bits) */
+.scroll-float {
+  overflow: hidden;
+}
+
+.scroll-float-text {
+  display: inline-block;
+}
+
+.char {
+  display: inline-block;
+}
+
 /* Keyword marquee between sections */
 @keyframes marquee {
   from {
