@@ -77,7 +77,7 @@ export function Services() {
                       <h3 className="mt-auto pt-10 text-lg font-semibold [transform:translateZ(20px)]">
                         {s.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted [transform:translateZ(12px)]">
+                      <p className="mt-2 min-h-[3lh] text-sm leading-relaxed text-muted [transform:translateZ(12px)]">
                         {s.desc}
                       </p>
                     </div>

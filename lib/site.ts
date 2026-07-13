@@ -30,7 +30,7 @@ export const services = [
   {
     icon: "factory",
     title: "Custom MS Fabrication",
-    desc: "Made-to-spec mild steel components for industrial, infrastructure and commercial projects.",
+    desc: "Made-to-spec MS components for industrial, infrastructure and commercial projects.",
   },
   {
     icon: "grip",
