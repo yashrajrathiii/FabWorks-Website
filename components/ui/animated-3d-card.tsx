@@ -71,7 +71,7 @@ export function Card3D({
         <motion.div
           aria-hidden
           style={{ background: glare }}
-          className="pointer-events-none absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover/card:opacity-100"
+          className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover/card:opacity-100"
         />
       </motion.div>
     </div>

@@ -46,16 +46,25 @@ export function Services() {
             return (
               <Reveal key={s.title} delay={Math.min(i * 0.05, 0.3)} className="h-full">
                 <Card3D>
-                  <div className="group h-full rounded-xl border border-line bg-background p-6 transition-colors duration-200 [transform-style:preserve-3d] hover:border-orange/60">
-                    <span className="inline-flex size-12 items-center justify-center rounded-lg bg-orange/10 text-orange transition-colors duration-200 [transform:translateZ(32px)] group-hover:bg-orange group-hover:text-white">
-                      <Icon className="size-6" aria-hidden />
-                    </span>
-                    <h3 className="mt-5 text-lg font-semibold [transform:translateZ(20px)]">
-                      {s.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted [transform:translateZ(12px)]">
-                      {s.desc}
-                    </p>
+                  {/* thin gradient border, brightest along the top edge */}
+                  <div className="h-full rounded-2xl bg-gradient-to-b from-orange/40 via-white/10 to-white/5 p-px [transform-style:preserve-3d]">
+                    <div className="group flex h-full min-h-[240px] flex-col rounded-[calc(1rem-1px)] bg-[linear-gradient(150deg,rgba(242,103,34,0.16)_0%,rgba(23,21,27,0.6)_40%,rgba(13,13,17,1)_100%)] bg-[#111014] p-6 [transform-style:preserve-3d]">
+                      <div className="flex items-start justify-between [transform:translateZ(32px)]">
+                        <span className="inline-flex size-12 items-center justify-center rounded-lg border border-orange/25 bg-orange/15 text-orange transition-colors duration-200 group-hover:bg-orange group-hover:text-white">
+                          <Icon className="size-6" aria-hidden />
+                        </span>
+                        <span
+                          className="mt-1 size-2 rounded-full bg-orange/80"
+                          aria-hidden
+                        />
+                      </div>
+                      <h3 className="mt-auto pt-10 text-lg font-semibold [transform:translateZ(20px)]">
+                        {s.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted [transform:translateZ(12px)]">
+                        {s.desc}
+                      </p>
+                    </div>
                   </div>
                 </Card3D>
               </Reveal>
