@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { MessageCircle, Phone } from "lucide-react";
 import { site, stats } from "@/lib/site";
+import { Button } from "@/components/ui/neon-button";
 
 export const HeroParallax = ({
   products,
@@ -118,22 +119,14 @@ export const Header = () => {
         states.
       </p>
       <div className="mt-10 flex flex-wrap items-center gap-4">
-        <a
-          href={site.whatsappHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex h-12 items-center gap-2 rounded-lg bg-blue px-6 font-semibold text-white transition-colors duration-200 hover:bg-blue/85"
-        >
+        <Button href={site.whatsappHref} target="_blank" rel="noopener noreferrer">
           <MessageCircle className="size-5" aria-hidden />
           Get a quote on WhatsApp
-        </a>
-        <a
-          href={site.phoneHref}
-          className="inline-flex h-12 items-center gap-2 rounded-lg border border-line px-6 font-semibold text-foreground transition-colors duration-200 hover:border-orange hover:text-orange"
-        >
+        </Button>
+        <Button href={site.phoneHref} variant="ghost">
           <Phone className="size-5" aria-hidden />
           {site.phone}
-        </a>
+        </Button>
       </div>
       <dl className="mt-12 flex flex-wrap gap-x-12 gap-y-6">
         {stats.map((s) => (

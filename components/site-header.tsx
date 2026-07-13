@@ -3,6 +3,7 @@ import React from "react";
 import { Menu, X } from "lucide-react";
 import { site } from "@/lib/site";
 import { Logo } from "@/components/logo";
+import { Button } from "@/components/ui/neon-button";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -37,24 +38,26 @@ export function SiteHeader() {
           <Logo />
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-muted transition-colors duration-200 hover:text-foreground"
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
+        <nav className="hidden items-center gap-4 md:flex" aria-label="Main">
+          <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-md">
+            {nav.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-full px-4 py-2 text-sm font-medium text-muted transition-colors duration-200 hover:bg-white/10 hover:text-foreground"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <Button
             href={site.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-10 items-center rounded-lg bg-blue px-5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-blue/85"
+            size="sm"
           >
             Get a quote
-          </a>
+          </Button>
         </nav>
 
         <button
@@ -86,15 +89,15 @@ export function SiteHeader() {
               </li>
             ))}
             <li className="mt-2">
-              <a
+              <Button
                 href={site.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-12 items-center justify-center rounded-lg bg-blue font-semibold text-white"
+                className="w-full"
                 onClick={() => setOpen(false)}
               >
                 Get a quote
-              </a>
+              </Button>
             </li>
           </ul>
         </nav>
