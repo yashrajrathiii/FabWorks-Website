@@ -121,7 +121,7 @@ export function AboutContact() {
       </div>
 
       <div className="mx-auto mt-12 grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-2">
-        <Reveal className="order-1 lg:order-2">
+        <Reveal className="order-1 lg:order-2 lg:pl-20">
           <div className="flex items-center gap-3">
             <MapPin className="size-9 shrink-0 text-orange" aria-hidden />
             <h3 className="text-3xl font-bold text-foreground md:text-4xl">

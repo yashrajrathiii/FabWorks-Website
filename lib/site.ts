@@ -11,8 +11,7 @@ export const site = {
   whatsappHref:
     "https://wa.me/918269970857?text=Hi%20Tarbha%20Industries%2C%20I%27d%20like%20a%20quote%20for%20a%20fabrication%20job.",
   hours: "Mon – Sat, 9:00 AM – 7:00 PM",
-  // Approximate Station Road pin — replace with exact coordinates if needed.
-  location: { lat: 21.2497, lng: 81.6339 },
+  location: { lat: 21.250156, lng: 81.631988 },
   googleMapsHref:
     "https://www.google.com/maps/search/?api=1&query=Tarbha%20Industries%2C%20Station%20Road%2C%20Raipur%2C%20Chhattisgarh",
   areasServed: [
