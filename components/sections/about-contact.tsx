@@ -2,6 +2,8 @@
 import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/motion";
+import { Button } from "@/components/ui/neon-button";
+import { GlowCard } from "@/components/ui/spotlight-card";
 
 export function AboutContact() {
   return (
@@ -37,7 +39,7 @@ export function AboutContact() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="rounded-xl border border-line bg-surface p-8">
+          <GlowCard glowColor="orange" customSize className="w-full sm:p-6">
             <h3 className="text-2xl font-bold">Get in touch</h3>
             <p className="mt-2 text-muted">
               Tell us what you need fabricated — we&apos;ll get back with an
@@ -89,24 +91,21 @@ export function AboutContact() {
               </li>
             </ul>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
+              <Button
                 href={site.whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-lg bg-blue font-semibold text-white transition-colors duration-200 hover:bg-blue/85"
+                className="flex-1"
               >
                 <MessageCircle className="size-5" aria-hidden />
                 WhatsApp us
-              </a>
-              <a
-                href={site.phoneHref}
-                className="inline-flex h-12 flex-1 items-center justify-center gap-2 rounded-lg border border-line font-semibold transition-colors duration-200 hover:border-orange hover:text-orange"
-              >
+              </Button>
+              <Button href={site.phoneHref} variant="ghost" className="flex-1">
                 <Phone className="size-5" aria-hidden />
                 Call now
-              </a>
+              </Button>
             </div>
-          </div>
+          </GlowCard>
         </Reveal>
       </div>
     </section>
