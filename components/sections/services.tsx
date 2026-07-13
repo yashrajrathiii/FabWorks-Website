@@ -46,15 +46,15 @@ export function Services() {
             return (
               <Reveal key={s.title} delay={Math.min(i * 0.05, 0.3)} className="h-full">
                 <Card3D>
-                  {/* thin gradient border, brightest along the top edge */}
-                  <div className="h-full rounded-2xl bg-gradient-to-b from-orange/40 via-white/10 to-white/5 p-px [transform-style:preserve-3d]">
-                    <div className="group flex h-full min-h-[240px] flex-col rounded-[calc(1rem-1px)] bg-[linear-gradient(150deg,rgba(242,103,34,0.16)_0%,rgba(23,21,27,0.6)_40%,rgba(13,13,17,1)_100%)] bg-[#111014] p-6 [transform-style:preserve-3d]">
+                  {/* thin orange→amber gradient border, brightest along the top */}
+                  <div className="h-full rounded-2xl bg-gradient-to-br from-orange/45 via-[#F7B733]/25 to-white/5 p-px [transform-style:preserve-3d]">
+                    <div className="group flex h-full min-h-[240px] flex-col rounded-[calc(1rem-1px)] bg-[linear-gradient(150deg,rgba(242,103,34,0.16)_0%,rgba(247,183,51,0.07)_38%,rgba(13,13,17,1)_100%)] bg-[#111014] p-6 [transform-style:preserve-3d]">
                       <div className="flex items-start justify-between [transform:translateZ(32px)]">
-                        <span className="inline-flex size-12 items-center justify-center rounded-lg border border-orange/25 bg-orange/15 text-orange transition-colors duration-200 group-hover:bg-orange group-hover:text-white">
+                        <span className="inline-flex size-12 items-center justify-center rounded-lg border border-orange/25 bg-orange/15 text-orange transition-all duration-200 group-hover:bg-[linear-gradient(135deg,#F26722,#F7B733)] group-hover:text-white">
                           <Icon className="size-6" aria-hidden />
                         </span>
                         <span
-                          className="mt-1 size-2 rounded-full bg-orange/80"
+                          className="mt-1 size-2 rounded-full bg-gradient-to-br from-orange to-[#F7B733]"
                           aria-hidden
                         />
                       </div>

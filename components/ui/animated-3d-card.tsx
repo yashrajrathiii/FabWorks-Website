@@ -39,7 +39,7 @@ export function Card3D({
 
   const glareXp = useTransform(mx, (v) => `${(v * 100).toFixed(1)}%`);
   const glareYp = useTransform(my, (v) => `${(v * 100).toFixed(1)}%`);
-  const glare = useMotionTemplate`radial-gradient(280px circle at ${glareXp} ${glareYp}, rgba(242, 103, 34, 0.16), transparent 70%)`;
+  const glare = useMotionTemplate`radial-gradient(280px circle at ${glareXp} ${glareYp}, rgba(242, 103, 34, 0.18), rgba(247, 183, 51, 0.10) 45%, transparent 70%)`;
 
   const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (reduce) return;
