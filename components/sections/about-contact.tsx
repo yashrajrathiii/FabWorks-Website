@@ -1,5 +1,12 @@
 "use client";
-import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, ExternalLink, MapPin, MessageCircle, Phone } from "lucide-react";
+import {
+  Map,
+  MapMarker,
+  MarkerContent,
+  MarkerPopup,
+  MarkerTooltip,
+} from "@/components/ui/mapcn-map-marker";
 import { site } from "@/lib/site";
 import { Reveal } from "@/components/motion";
 import { Button } from "@/components/ui/neon-button";
@@ -110,6 +117,42 @@ export function AboutContact() {
               </Button>
             </div>
           </GlowCard>
+        </Reveal>
+      </div>
+
+      <div className="mx-auto mt-12 max-w-7xl px-4">
+        <Reveal>
+          <div className="h-[420px] w-full overflow-hidden rounded-2xl border border-line">
+            <Map center={[site.location.lng, site.location.lat]} zoom={15}>
+              <MapMarker
+                longitude={site.location.lng}
+                latitude={site.location.lat}
+              >
+                <MarkerContent>
+                  <span className="relative flex size-5">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-orange opacity-60" />
+                    <span className="relative inline-flex size-5 rounded-full border-2 border-white bg-orange shadow-lg" />
+                  </span>
+                </MarkerContent>
+                <MarkerTooltip>{site.name}</MarkerTooltip>
+                <MarkerPopup>
+                  <div className="space-y-2">
+                    <p className="font-semibold">{site.name}</p>
+                    <p className="text-xs text-muted">{site.address}</p>
+                    <a
+                      href={site.googleMapsHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange hover:underline"
+                    >
+                      Open in Google Maps
+                      <ExternalLink className="size-3.5" aria-hidden />
+                    </a>
+                  </div>
+                </MarkerPopup>
+              </MapMarker>
+            </Map>
+          </div>
         </Reveal>
       </div>
     </section>
