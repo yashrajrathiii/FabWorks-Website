@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { services } from "@/lib/site";
 import { Reveal } from "@/components/motion";
+import { Card3D } from "@/components/ui/animated-3d-card";
 
 const icons: Record<string, LucideIcon> = {
   factory: Factory,
@@ -43,16 +44,20 @@ export function Services() {
           {services.map((s, i) => {
             const Icon = icons[s.icon];
             return (
-              <Reveal key={s.title} delay={Math.min(i * 0.05, 0.3)}>
-                <div className="group h-full rounded-xl border border-line bg-background p-6 transition-colors duration-200 hover:border-orange/60">
-                  <span className="inline-flex size-12 items-center justify-center rounded-lg bg-orange/10 text-orange transition-colors duration-200 group-hover:bg-orange group-hover:text-white">
-                    <Icon className="size-6" aria-hidden />
-                  </span>
-                  <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    {s.desc}
-                  </p>
-                </div>
+              <Reveal key={s.title} delay={Math.min(i * 0.05, 0.3)} className="h-full">
+                <Card3D>
+                  <div className="group h-full rounded-xl border border-line bg-background p-6 transition-colors duration-200 [transform-style:preserve-3d] hover:border-orange/60">
+                    <span className="inline-flex size-12 items-center justify-center rounded-lg bg-orange/10 text-orange transition-colors duration-200 [transform:translateZ(32px)] group-hover:bg-orange group-hover:text-white">
+                      <Icon className="size-6" aria-hidden />
+                    </span>
+                    <h3 className="mt-5 text-lg font-semibold [transform:translateZ(20px)]">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted [transform:translateZ(12px)]">
+                      {s.desc}
+                    </p>
+                  </div>
+                </Card3D>
               </Reveal>
             );
           })}
