@@ -120,13 +120,26 @@ export function AboutContact() {
         </Reveal>
       </div>
 
-      <div className="mx-auto mt-12 max-w-7xl px-4">
-        <Reveal>
+      <div className="mx-auto mt-12 grid max-w-7xl items-center gap-10 px-4 lg:grid-cols-2">
+        <Reveal className="order-1 lg:order-2">
+          <div className="flex items-center gap-3">
+            <MapPin className="size-9 shrink-0 text-orange" aria-hidden />
+            <h3 className="text-3xl font-bold text-foreground md:text-4xl">
+              Visit us
+            </h3>
+          </div>
+          <p className="mt-4 max-w-md text-muted">
+            Find us on {site.address}. Tap the marker on the map to open our
+            location in Google Maps and get directions.
+          </p>
+        </Reveal>
+        <Reveal className="order-2 lg:order-1">
           <div className="h-[420px] w-full overflow-hidden rounded-2xl border border-line">
             <Map center={[site.location.lng, site.location.lat]} zoom={15}>
               <MapMarker
                 longitude={site.location.lng}
                 latitude={site.location.lat}
+                defaultOpen
               >
                 <MarkerContent>
                   <span className="relative flex size-5">

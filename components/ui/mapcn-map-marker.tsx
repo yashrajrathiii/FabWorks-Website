@@ -73,13 +73,15 @@ function pickChild(
 export function MapMarker({
   longitude,
   latitude,
+  defaultOpen = false,
   children,
 }: {
   longitude: number;
   latitude: number;
+  defaultOpen?: boolean;
   children: React.ReactNode;
 }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(defaultOpen);
   const [hovered, setHovered] = React.useState(false);
 
   const content = pickChild(children, MarkerContent);
