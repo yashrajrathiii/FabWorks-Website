@@ -129,8 +129,7 @@ export function AboutContact() {
             </h3>
           </div>
           <p className="mt-4 max-w-md text-muted">
-            Find us on {site.address}. Tap the marker on the map to open our
-            location in Google Maps and get directions.
+            Find us on {site.address}.
           </p>
         </Reveal>
         <Reveal className="order-2 lg:order-1">

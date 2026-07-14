@@ -130,6 +130,7 @@ export function MapMarker({
           offset={16}
           closeButton={false}
           closeOnClick={false}
+          focusAfterOpen={false}
           onClose={() => setOpen(false)}
           className="mapcn-popup"
         >
