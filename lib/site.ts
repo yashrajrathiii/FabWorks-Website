@@ -91,28 +91,19 @@ export const whyUs = [
   },
 ] as const;
 
-// Tiles for the hero parallax + work gallery. Thumbnails are placeholders —
-// replace the files in /public/work with real photos (same filenames) later.
+// Real client photos (optimized 1200×900 WebP) for the hero parallax +
+// work gallery. Regenerate via scripts/import-work-photos.js.
 export const workItems = [
-  "Heavy-Duty Clamps",
-  "Electric Poles",
-  "Street Light Brackets",
-  "Hoarding Frames",
-  "MS Chambers",
-  "Grills & Gates",
-  "Structural Frames",
-  "Custom Brackets",
-  "Fountain Structure",
-  "Signboard Frames",
-  "Industrial Fabrication",
-  "Pole Brackets",
-  "Site Installation",
-  "Commercial Grills",
-  "Custom MS Works",
+  { title: "Heavy-Duty Clamps", image: "/work/clamps.webp" },
+  { title: "Electric Poles", image: "/work/electric-poles.webp" },
+  { title: "Street Light Brackets", image: "/work/street-light-brackets.webp" },
+  { title: "Chamber Frames", image: "/work/chamber-frames.webp" },
+  { title: "Grills & Gates", image: "/work/grills-gates.webp" },
+  { title: "Inside our workshop", image: "/work/workshop.webp" },
 ] as const;
 
-export const heroProducts = workItems.map((title, i) => ({
-  title,
-  link: "#work",
-  thumbnail: `/work/placeholder-${(i % 6) + 1}.svg`,
-}));
+// 15 hero tiles cycling through the six photos.
+export const heroProducts = Array.from({ length: 15 }, (_, i) => {
+  const item = workItems[i % workItems.length];
+  return { title: item.title, link: "#work", thumbnail: item.image };
+});
