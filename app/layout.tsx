@@ -15,6 +15,8 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.tarbhaindustries.in"),
+  alternates: { canonical: "/" },
   title: "Tarbha Industries — Iron & Steel Fabrication in Raipur",
   description:
     "Custom mild steel fabrication in Raipur with 25+ years of experience: heavy-duty clamps, electric poles, chambers, grills, street light brackets, hoarding frames and custom MS works. Serving Chhattisgarh, Odisha, Maharashtra, Rajasthan and Madhya Pradesh.",
@@ -33,6 +35,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Tarbha Industries",
+  url: "https://www.tarbhaindustries.in",
   description:
     "Custom mild steel fabrication with 25+ years of experience — heavy-duty clamps, electric poles, chambers, grills, hoarding frames and custom MS components.",
   telephone: "+917509115513",
