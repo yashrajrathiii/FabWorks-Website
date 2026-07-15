@@ -36,7 +36,7 @@ export function Services() {
           </p>
           <ScrollFloat
             containerClassName="mt-3"
-            textClassName="text-3xl font-bold md:text-5xl"
+            textClassName="text-3xl font-bold text-orange md:text-5xl"
           >
             Services
           </ScrollFloat>
@@ -53,16 +53,16 @@ export function Services() {
               <Reveal key={s.title} delay={Math.min(i * 0.05, 0.3)} className="h-full">
                 <Card3D>
                   {/* thin orange→amber gradient border, brightest along the top */}
-                  <div className="h-full rounded-2xl bg-gradient-to-br from-orange/45 via-[#F7B733]/25 to-white/5 p-px [transform-style:preserve-3d]">
-                    <div className="group relative flex h-full min-h-[240px] flex-col rounded-[calc(1rem-1px)] bg-[linear-gradient(150deg,rgba(242,103,34,0.16)_0%,rgba(247,183,51,0.07)_38%,rgba(13,13,17,1)_100%)] bg-[#111014] p-6 [transform-style:preserve-3d]">
+                  <div className="h-full rounded-2xl bg-gradient-to-br from-orange/60 via-[#F7B733]/35 to-black/10 p-px [transform-style:preserve-3d]">
+                    <div className="group relative flex h-full min-h-[240px] flex-col rounded-[calc(1rem-1px)] bg-[linear-gradient(150deg,rgba(245,132,61,0.14)_0%,rgba(247,183,51,0.06)_38%,rgba(255,255,255,1)_100%)] bg-surface p-6 [transform-style:preserve-3d]">
                       {/* blueprint grid, fading out from the lit corner */}
                       <div
                         aria-hidden
                         className="pointer-events-none absolute inset-0 rounded-[calc(1rem-1px)]"
                         style={{
                           backgroundImage: `
-                            linear-gradient(to right, rgba(245,246,248,0.09) 1px, transparent 1px),
-                            linear-gradient(to bottom, rgba(245,246,248,0.09) 1px, transparent 1px)
+                            linear-gradient(to right, rgba(44,38,39,0.08) 1px, transparent 1px),
+                            linear-gradient(to bottom, rgba(44,38,39,0.08) 1px, transparent 1px)
                           `,
                           backgroundSize: "26px 26px",
                           WebkitMaskImage:

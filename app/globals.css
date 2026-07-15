@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b0b0f;
-  --surface: #14141a;
-  --line: #26262e;
-  --foreground: #f5f6f8;
-  --muted: #a3a9b8;
-  --orange: #f26722;
-  --blue: #4318ff;
+  /* Palette: Seashell bg · Pumpkin Spice headings · Shadow Grey text ·
+     Taupe Grey secondary · Emerald CTAs */
+  --background: #fef3ec;
+  --surface: #ffffff;
+  --line: #f0dccc;
+  --foreground: #2c2627;
+  --muted: #63545e;
+  --orange: #f5843d;
+  --emerald: #62c370;
 }
 
 @theme inline {
@@ -17,7 +19,7 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-orange: var(--orange);
-  --color-blue: var(--blue);
+  --color-emerald: var(--emerald);
   --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
 }
@@ -44,19 +46,19 @@ h4 {
   color: #fff;
 }
 
-/* Dark theme for maplibre popups (mapcn map) */
+/* Themed maplibre popups (mapcn map) */
 .mapcn-popup .maplibregl-popup-content {
-  background: #17151b;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 0.75rem;
   color: var(--foreground);
-  box-shadow: 0 1rem 2rem -1rem black;
+  box-shadow: 0 1rem 2rem -1rem rgba(44, 38, 39, 0.35);
   padding: 0.75rem 1rem;
 }
 
 .mapcn-popup .maplibregl-popup-tip {
-  border-top-color: #17151b;
-  border-bottom-color: #17151b;
+  border-top-color: var(--surface);
+  border-bottom-color: var(--surface);
 }
 
 .mapcn-tooltip .maplibregl-popup-content {

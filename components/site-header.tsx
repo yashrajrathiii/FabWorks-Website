@@ -39,12 +39,12 @@ export function SiteHeader() {
         </a>
 
         <nav className="hidden items-center gap-4 md:flex" aria-label="Main">
-          <div className="flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-md">
+          <div className="flex items-center gap-1 rounded-full border border-black/10 bg-black/5 p-1 backdrop-blur-md">
             {nav.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-4 py-2 text-sm font-medium text-muted transition-colors duration-200 hover:bg-white/10 hover:text-foreground"
+                className="rounded-full px-4 py-2 text-sm font-medium text-muted transition-colors duration-200 hover:bg-black/10 hover:text-foreground"
               >
                 {item.label}
               </a>

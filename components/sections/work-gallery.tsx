@@ -15,7 +15,7 @@ export function WorkGallery() {
           </p>
           <ScrollFloat
             containerClassName="mt-3"
-            textClassName="text-3xl font-bold md:text-5xl"
+            textClassName="text-3xl font-bold text-orange md:text-5xl"
           >
             Recent fabrication
           </ScrollFloat>
@@ -34,7 +34,7 @@ export function WorkGallery() {
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4 font-semibold">
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 font-semibold text-white">
                   {title}
                 </figcaption>
               </figure>

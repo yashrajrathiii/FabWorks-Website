@@ -13,16 +13,16 @@ const base =
 
 const variantClasses: Record<Variant, string> = {
   default:
-    "bg-blue/20 border-blue/40 text-white backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.10)] hover:bg-blue/35 hover:border-blue/70",
+    "bg-emerald border-emerald/60 text-foreground shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] hover:bg-emerald/85 hover:border-emerald",
   solid:
-    "bg-blue border-transparent text-white hover:bg-blue/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]",
+    "bg-emerald border-transparent text-foreground hover:bg-emerald/85 shadow-[inset_0_1px_0_rgba(255,255,255,0.35)]",
   ghost:
-    "bg-white/5 border-white/15 text-foreground backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] hover:border-orange/60 hover:text-orange hover:bg-white/10",
+    "bg-black/5 border-foreground/15 text-foreground backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] hover:border-orange/60 hover:text-orange hover:bg-black/10",
 };
 
 const neonClasses: Record<Variant, string> = {
-  default: "via-[#8f7bff]",
-  solid: "via-[#8f7bff]",
+  default: "via-[#2f8f43]",
+  solid: "via-[#2f8f43]",
   ghost: "via-orange",
 };
 

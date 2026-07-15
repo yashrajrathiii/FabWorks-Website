@@ -23,7 +23,7 @@ export function AboutContact() {
           </p>
           <ScrollFloat
             containerClassName="mt-3"
-            textClassName="text-3xl font-bold md:text-5xl"
+            textClassName="text-3xl font-bold text-orange md:text-5xl"
           >
             {site.name}
           </ScrollFloat>

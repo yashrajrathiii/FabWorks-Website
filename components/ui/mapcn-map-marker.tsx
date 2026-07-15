@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 // Free dark Carto basemap — no API key required.
 
 const MAP_STYLE =
-  "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
+  "https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json";
 
 export function Map({
   center,
